@@ -1,14 +1,16 @@
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Code</th>
-      <th scope="col">Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let client of clients">
-      <td scope="row">{{client.code}}</td>
-      <td>{{client.name}}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container col-10">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Code</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients">
+        <td scope="row">{{client.code}}</td>
+        <td>{{client.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

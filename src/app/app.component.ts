@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AuthService } from './shared/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   @Input() title: string;
+
+  constructor(private authService: AuthService) { }
+  onLogout(): void {
+    this.authService.doLogout();
+  }
 }

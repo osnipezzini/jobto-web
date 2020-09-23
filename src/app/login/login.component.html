@@ -1,0 +1,20 @@
+<div class="auth-wrapper container col-lg-6">
+  <form class="form-signin" [formGroup]="form" (ngSubmit)="loginUser()">
+    <h3 class="h3 mb-3 font-weight-normal text-center">Please sign in</h3>
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" formControlName="username" placeholder="Enter username" required>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control" formControlName="password" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+    <input type="checkbox" formControlName="saveUser" id="saveUser" name="saveUser">
+    <label for="saveUser" class="col-md-8">Stay logged ?</label>
+    <a routerLink="/forgotPassword" class="col-md-4" routerLinkActive="active">Forgot password</a>
+    <div class="container">
+      <button type="button" class="btn btn-info btn-lg btn-block" routerLink="/register">Register</button>
+    </div>
+  </form>
+</div>
